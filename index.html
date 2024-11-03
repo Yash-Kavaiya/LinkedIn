@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Reel Creator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Top Section - Reel Display -->
+    <div id="reel-display">
+        <div id="question-area">
+            <h2 id="display-question"></h2>
+            <div id="options">
+                <button class="option-btn" id="option1-btn"></button>
+                <button class="option-btn" id="option2-btn"></button>
+                <button class="option-btn" id="option3-btn"></button>
+                <button class="option-btn" id="option4-btn"></button>
+            </div>
+        </div>
+        <div id="explanation-area"></div>
+    </div>
+
+    <!-- Left Side - Question Upload Form -->
+    <div id="question-form">
+        <h1>Create Your Question Reel</h1>
+        <form id="form">
+            <label for="question">Question:</label>
+            <textarea id="question" name="question" placeholder="Enter your question" required></textarea>
+
+            <label for="option1">Option 1:</label>
+            <input type="text" id="option1" name="option1" placeholder="Option 1" required>
+
+            <label for="option2">Option 2:</label>
+            <input type="text" id="option2" name="option2" placeholder="Option 2" required>
+
+            <label for="option3">Option 3:</label>
+            <input type="text" id="option3" name="option3" placeholder="Option 3" required>
+
+            <label for="option4">Option 4:</label>
+            <input type="text" id="option4" name="option4" placeholder="Option 4" required>
+
+            <label for="correct-answer">Correct Answer:</label>
+            <select id="correct-answer" name="correct-answer" required>
+                <option value="">Select the correct option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+
+            <label for="explanation">Explanation (Optional):</label>
+            <textarea id="explanation" name="explanation" placeholder="Enter explanation (if any)"></textarea>
+
+            <button type="submit">Create Reel</button>
+        </form>
+
+        <!-- Recording Controls -->
+        <div id="recording-controls">
+            <button id="start-recording">Start Recording</button>
+            <button id="stop-recording" disabled>Stop Recording</button>
+            <a id="download-link" href="#" download="reel.webm" style="display: none;">Download Video</a>
+        </div>
+    </div>
+
+    <!-- Optional Sound Effects -->
+    <audio id="reveal-sound" src="assets/sounds/reveal-sound.mp3"></audio>
+
+    <!-- Include CCapture.js Library -->
+    <script src="assets/libs/ccapture.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
